@@ -31,11 +31,11 @@ List.proptypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired
+      id: PropTypes.string.isRequired,
     })
   ).isRequired,
   selected: PropTypes.arrayOf(PropTypes.string),
-  toggleSelect: PropTypes.func
+  toggleSelect: PropTypes.func,
 };
 
 export default List;

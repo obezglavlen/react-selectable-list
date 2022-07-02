@@ -1,5 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { createGlobalStyle } from "styled-components";
+import { StrictMode } from "react";
 
 import App from "./App";
 
@@ -52,8 +53,8 @@ table {
 `;
 
 root.render(
-  <>
+  <StrictMode>
     <GlobalStyles />
     <App />
-  </>
+  </StrictMode>
 );

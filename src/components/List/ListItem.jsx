@@ -26,7 +26,7 @@ function ListItem({ toggleSelect, id, children, isSelected }) {
 ListItem.prototypes = {
   toggleSelect: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
-  isSelected: PropTypes.bool.isRequired
+  isSelected: PropTypes.bool.isRequired,
 };
 
 export default ListItem;
