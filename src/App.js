@@ -35,8 +35,18 @@ export default function App() {
         selected={selected}
         toggleSelect={toggleSelect}
         width="120px"
+        isBorderCollapse
       />
-      <button onClick={() => alert([...selected].join("\n"))}>
+      <button
+        onClick={() =>
+          alert(
+            [
+              // @ts-ignore
+              ...selected,
+            ].join("\n")
+          )
+        }
+      >
         Show selected items
       </button>
     </>

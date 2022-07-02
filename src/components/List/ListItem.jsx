@@ -6,9 +6,10 @@ const StyledLi = styled.li`
   display: block;
   position: relative;
   border: 2px solid transparent;
-  border-color: ${({ isSelected }) => isSelected && "black"};
-  margin-top: -1px;
-  top: 1px;
+  border-color: ${({
+    // @ts-ignore
+    isSelected,
+  }) => isSelected && "black"};
 `;
 
 function ListItem({ toggleSelect, id, children, isSelected }) {
@@ -17,16 +18,21 @@ function ListItem({ toggleSelect, id, children, isSelected }) {
   }
 
   return (
-    <StyledLi key={id} onClick={onClick} isSelected={isSelected}>
+    <StyledLi
+      key={id}
+      onClick={onClick}
+      // @ts-ignore
+      isSelected={isSelected}
+    >
       {children}
     </StyledLi>
   );
 }
 
-ListItem.prototypes = {
+ListItem.protoTypes = {
+  isSelected: PropTypes.bool.isRequired,
   toggleSelect: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
-  isSelected: PropTypes.bool.isRequired,
 };
 
 export default ListItem;
