@@ -1,4 +1,3 @@
-import "./styles.css";
 import List from "./components/List";
 import { v4 as uuid4 } from "uuid";
 import useSelectableList from "./hooks/useSelectableList";
