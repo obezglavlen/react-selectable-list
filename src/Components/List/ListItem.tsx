@@ -1,29 +1,12 @@
-import styled from "styled-components";
+import StyledLi, { StyleProps } from "./styles/ListItem.styled";
 
-interface ListItemProps {
+interface ListItemProps extends StyleProps {
   toggleSelect: (arg: string | number) => void;
   id: string | number;
   children: any;
 }
 
-interface StyleProps {
-  isSelected: boolean;
-}
-
-const StyledLi = styled.li<StyleProps>`
-  cursor: pointer;
-  display: block;
-  position: relative;
-  border: 2px solid transparent;
-  border-color: ${({ isSelected }) => isSelected && "black"};
-`;
-
-function ListItem({
-  toggleSelect,
-  id,
-  children,
-  isSelected,
-}: ListItemProps & StyleProps) {
+function ListItem({ toggleSelect, id, children, isSelected }: ListItemProps) {
   function onClick() {
     toggleSelect(id);
   }
