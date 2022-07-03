@@ -44,6 +44,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+* {
+  font-family: 'Exo 2', sans-serif !important;
+}
 `;
 
 export default GlobalStyles;
